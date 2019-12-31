@@ -1,8 +1,9 @@
 from fedora:30
 
+RUN yum install -y glibc-langpack-en
 COPY requirements.sh /tmp
 RUN /tmp/requirements.sh
-RUN yum -y install libxcrypt-compat
+RUN yum install -y libxcrypt-compat
 
 RUN useradd -m linuxbrew
 USER linuxbrew
