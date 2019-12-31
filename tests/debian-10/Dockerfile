@@ -1,5 +1,5 @@
 FROM linuxbrew/debian:10
 
-USER linuxbrew
+USER developer
 
 RUN sh -c ". ~/.profile && brew install zsh"

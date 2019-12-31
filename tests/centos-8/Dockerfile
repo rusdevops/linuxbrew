@@ -1,5 +1,5 @@
 FROM linuxbrew/centos:8
 
-USER linuxbrew
+USER developer
 
-RUN bash -c ". ~/.profile && brew install neovim"
+RUN bash -c ". ~/.profile && brew install zsh"

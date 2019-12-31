@@ -12,8 +12,8 @@ RUN echo "LC_ALL=en_US.UTF-8" >> /etc/environment && \
 COPY requirements.sh /tmp
 RUN /tmp/requirements.sh
 
-RUN useradd -m linuxbrew
-USER linuxbrew
+RUN useradd -m developer
+USER developer
 
 COPY install.sh /tmp
 RUN /tmp/install.sh

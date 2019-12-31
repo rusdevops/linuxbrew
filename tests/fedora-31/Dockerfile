@@ -1,5 +1,5 @@
 FROM linuxbrew/fedora:31
 
-USER linuxbrew
+USER docker
 
-RUN sh -c ". ~/.profile && brew install neovim"
+RUN sh -c ". ~/.profile && brew install zsh"
