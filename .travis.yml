@@ -8,43 +8,43 @@ jobs:
   include:
   - name: "centos:7"
     script:
-    - pushd linuxbrew/centos-7
+    - pushd docker/centos-7
     - tar -czh . | docker build -t linuxbrew/centos:7 -
     - popd
     - docker build tests/centos-7
   - name: "centos:8"
     script:
-    - pushd linuxbrew/centos-8
+    - pushd docker/centos-8
     - tar -czh . | docker build -t linuxbrew/centos:8 -
     - popd
     - docker build tests/centos-8
   - name: "debian:10"
     script:
-    - pushd linuxbrew/debian-10
+    - pushd docker/debian-10
     - tar -czh . | docker build -t linuxbrew/debian:10 -
     - popd
     - docker build tests/debian-10
   - name: "fedora:30"
     script:
-    - pushd linuxbrew/fedora-30
+    - pushd docker/fedora-30
     - tar -czh . | docker build -t linuxbrew/fedora:30 -
     - popd
     - docker build tests/fedora-30
   - name: "fedora:31"
     script:
-    - pushd linuxbrew/fedora-31
+    - pushd docker/fedora-31
     - tar -czh . | docker build -t linuxbrew/fedora:31 -
     - popd
     - docker build tests/fedora-31
   - name: "ubuntu:18.04"
     script:
-    - pushd linuxbrew/ubuntu-18.04
+    - pushd docker/ubuntu-18.04
     - tar -czh . | docker build -t linuxbrew/ubuntu:18.04 -
     - popd
     - docker build tests/ubuntu-18.04
   - name: "ubuntu:19.04"
     script:
-    - pushd linuxbrew/ubuntu-19.04
+    - pushd docker/ubuntu-19.04
     - tar -czh . | docker build -t linuxbrew/ubuntu:19.04 -
     - popd
     - docker build tests/ubuntu-19.04
