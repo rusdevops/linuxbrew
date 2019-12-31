@@ -1,3 +1,1 @@
-#!/bin/sh
-
-apt install -y build-essential curl file git
+scripts/debian/requirements.sh

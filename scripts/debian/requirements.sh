@@ -1,3 +1,3 @@
 #!/bin/sh
 
-apt install -y build-essential curl file git
+apt-get install -y build-essential curl file git
