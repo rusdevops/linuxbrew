@@ -1,5 +1,5 @@
 FROM linuxbrew/ubuntu:19.04
 
-USER developer
+USER linuxbrew
 
 RUN sh -c ". ~/.profile && brew install zsh"

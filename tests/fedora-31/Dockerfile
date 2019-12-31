@@ -1,5 +1,5 @@
 FROM linuxbrew/fedora:31
 
-USER developer
+USER linuxbrew
 
 RUN sh -c ". ~/.profile && brew install zsh"

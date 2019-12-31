@@ -1,5 +1,5 @@
 FROM linuxbrew/centos:7
 
-USER developer
+USER linuxbrew
 
 RUN bash -c ". ~/.profile && brew install zsh"
