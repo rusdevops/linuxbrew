@@ -1,1 +1,1 @@
-scripts/debian/requirements.sh
+../../scripts/debian/requirements.sh

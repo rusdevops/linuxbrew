@@ -1,1 +1,1 @@
-scripts/install.sh
+../../scripts/install.sh

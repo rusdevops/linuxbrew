@@ -1,1 +1,1 @@
-scripts/redhat/requirements.sh
+../../scripts/redhat/requirements.sh
