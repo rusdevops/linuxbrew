@@ -1,5 +1,5 @@
 # linuxbrew
-[![Build Status](https://travis-ci.org/hijadelaluuna/linuxbrew.svg?branch=master)](https://travis-ci.org/hijadelaluuna/linuxbrew)
+[![Build Status](https://travis-ci.org/rusdevops/linuxbrew.svg?branch=master)](https://travis-ci.org/rusdevops/linuxbrew)
 
 0. [ ] linuxbrew/alpine:3.10
 1. [ ] linuxbrew/alpine:3.11
