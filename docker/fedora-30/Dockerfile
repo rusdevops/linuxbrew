@@ -1,6 +1,6 @@
 from fedora:30
 
-RUN yum install -y glibc-langpack-en
+RUN yum install -y glibc-langpack-en findutils
 COPY requirements.sh /tmp
 RUN /tmp/requirements.sh
 RUN yum install -y libxcrypt-compat
