@@ -14,7 +14,7 @@ jobs:
     - docker build tests/centos-7
   - name: "centos:8"
     script:
-    - pushd linuxbrew/centos-6
+    - pushd linuxbrew/centos-8
     - tar -czh . | docker build -t linuxbrew/centos:8 -
     - popd
     - docker build tests/centos-8
