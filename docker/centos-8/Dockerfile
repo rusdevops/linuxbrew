@@ -9,3 +9,7 @@ USER developer
 
 COPY install.sh /tmp
 RUN /tmp/install.sh
+
+WORKDIR /home/developer
+ENV PATH=/home/developer/.linuxbrew/bin:/home/developer/.linuxbrew/sbin:$PATH \
+    SHELL=/bin/bash
