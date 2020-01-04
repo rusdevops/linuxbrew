@@ -1,5 +1,5 @@
 # linuxbrew
-[![Build Status](https://travis-ci.org/rusdevops/linuxbrew.svg?branch=master)](https://travis-ci.org/rusdevops/linuxbrew)
+[![Build Status](https://travis-ci.org/fast-ide/linuxbrew.svg?branch=master)](https://travis-ci.org/fast-ide/linuxbrew)
 
 0. [ ] linuxbrew/alpine:3.10
 1. [ ] linuxbrew/alpine:3.11
