@@ -8,4 +8,6 @@
 4. [x] `linuxbrew/fedora:31`
 5. [x] `linuxbrew/ubuntu:18.04`
 6. [x] `linuxbrew/ubuntu:19.04`
-7. [ ] `linuxbrew/alpine:3:11`
+7. [ ] `linuxbrew/alpine:3:11` 
+
+see: https://github.com/Linuxbrew/brew/wiki/Alpine-Linux
