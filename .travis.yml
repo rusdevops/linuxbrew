@@ -17,19 +17,11 @@ stages:
 - build
 - test
 
-jobs:
-  include:
-  - stage: build
-    script:
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - cd docker/${OS_FAMILY}-${OS_VERSION}
-    - tar -czh . | docker build -t ${DOCKER_USERNAME}/travis-ci-linuxbrew-${OS_FAMILY}:%{OS_VERSION} -
-    - docker push ${DOCKER_USERNAME}/travis-ci-linuxbrew-${OS_FAMILY}:%{OS_VERSION}
-  - stage: test
-    script:
-    - docker pull ${DOCKER_USERNAME}/travis-ci-linuxbrew-${OS_FAMILY}:%{OS_VERSION}
-    - docker tag ${DOCKER_USERNAME}/travis-ci-linuxbrew-${OS_FAMILY}:%{OS_VERSION} ${DOCKER_USERNAME}/linuxbrew-${OS_FAMILY}:%{OS_VERSION}
-    - docker build --build-arg OS_FAMILY=${OS_FAMILY} --build-arg OS_VERSION=${OS_VERSION} tests
+script:
+- pushd docker/${OS_FAMILY}-${OS_VERSION}
+- tar -czh . | docker build -t ${DOCKER_USERNAME}/linuxbrew-${OS_FAMILY}:%{OS_VERSION} -
+- popd
+- docker build --build-arg OS_FAMILY=${OS_FAMILY} --build-arg OS_VERSION=${OS_VERSION} tests
 
 after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
