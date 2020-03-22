@@ -14,7 +14,9 @@ env:
 - OS_FAMILY=ubuntu OS_VERSION=19.04
 
 script:
-- pushd docker/${OS_FAMILY}-${OS_VERSION}
-- tar -czh . | docker build -t linuxbrew/${OS_FAMILY}:${OS_VERSION} -
-- popd
-- docker build tests/${OS_FAMILY}-${OS_VERSION}
+- cd docker/${OS_FAMILY}-${OS_VERSION}
+- tar -czh . | docker build -t fastide/linuxbrew-${OS_FAMILY}:${OS_VERSION} -
+
+after_success:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push fastide/linuxbrew-${OS_FAMILY}:${OS_VERSION}
