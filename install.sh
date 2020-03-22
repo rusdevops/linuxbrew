@@ -11,4 +11,4 @@ eval $($HOME/.linuxbrew/bin/brew shellenv)
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.profile
 
-brew doctor
+brew doctor || echo "check Warning: Some of Homebrew's bottles (binary packages) can only be used with the default prefix #todo"
