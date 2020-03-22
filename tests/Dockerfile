@@ -4,4 +4,4 @@ FROM fastide/linuxbrew-${OS_FAMILY}:${OS_VERSION}
 
 USER developer
 
-RUN brew install zsh
+RUN brew install curl
