@@ -1,4 +1,4 @@
-from fedora:30
+from fedora:32
 
 RUN yum install -y glibc-langpack-en findutils
 COPY requirements.sh /tmp
