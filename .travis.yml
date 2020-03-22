@@ -15,7 +15,7 @@ env:
 
 script:
 - pushd docker/${OS_FAMILY}-${OS_VERSION}
-- tar -czh . | docker build -t ${DOCKER_USERNAME}/linuxbrew-${OS_FAMILY}:%{OS_VERSION} -
+- tar -czh . | docker build -t ${DOCKER_USERNAME}/linuxbrew-${OS_FAMILY}:${OS_VERSION} -
 - popd
 - docker build --build-arg OS_FAMILY=${OS_FAMILY} --build-arg OS_VERSION=${OS_VERSION} tests
 
