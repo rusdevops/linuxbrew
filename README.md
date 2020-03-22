@@ -1,5 +1,6 @@
-# linuxbrew
 [![Build Status](https://travis-ci.org/fast-ide/linuxbrew.svg?branch=master)](https://travis-ci.org/fast-ide/linuxbrew)
+
+# linuxbrew
 
 0. [x] `linuxbrew/centos:7`
 1. [x] `linuxbrew/centos:8`
