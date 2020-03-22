@@ -11,4 +11,4 @@ eval $($HOME/.linuxbrew/bin/brew shellenv)
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>$HOME/.profile
 
-brew config
+brew doctor
