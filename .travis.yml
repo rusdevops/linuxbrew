@@ -13,10 +13,6 @@ env:
 - OS_FAMILY=ubuntu OS_VERSION=18.04
 - OS_FAMILY=ubuntu OS_VERSION=19.04
 
-stages:
-- build
-- test
-
 script:
 - pushd docker/${OS_FAMILY}-${OS_VERSION}
 - tar -czh . | docker build -t ${DOCKER_USERNAME}/linuxbrew-${OS_FAMILY}:%{OS_VERSION} -
