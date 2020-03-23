@@ -1,1 +1,1 @@
-../../scripts/redhat/requirements.sh
+../../scripts/fedora/requirements.sh
