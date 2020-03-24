@@ -36,9 +36,9 @@ jobs:
       - uses: actions/checkout@master
       - name: build
         run: |
-          pushd docker/${OS_FAMILY}-${OS_VERSION}
-          tar -czh . | docker build -t fastide/linuxbrew-${OS_FAMILY}:${OS_VERSION} -
+          pushd docker/${{matrix.family}}-${{matrix.version}}
+          tar -czh . | docker build -t fastide/linuxbrew-${{matrix.family}}:${{matrix.version}} -
           popd
-          docker build --build-arg OS_FAMILY=${OS_FAMILY} --build-arg OS_VERSION=${OS_VERSION} tests
+          docker build --build-arg OS_FAMILY=${{matrix.family}} --build-arg OS_VERSION=${{matrix.version}} tests
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username fastide --password-stdin
-          docker push fastide/linuxbrew-${OS_FAMILY}:${OS_VERSION}
+          docker push fastide/linuxbrew-${{matrix.family}}:${{matrix.version}}
