@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/fast-ide/linuxbrew.svg?branch=master)](https://travis-ci.org/fast-ide/linuxbrew)
+![ci_dockerfile](https://github.com/fast-ide/linuxbrew/workflows/ci_dockerfile/badge.svg)
 
 # linuxbrew
 
