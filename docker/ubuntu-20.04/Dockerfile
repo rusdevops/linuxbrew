@@ -1,4 +1,4 @@
-from ubuntu:19.04
+FROM ubuntu:20.04
 
 RUN apt update -y
 RUN apt upgrade -y
