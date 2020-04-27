@@ -9,7 +9,7 @@ yum -y install curl \
                perl-CPAN \
                perl-Module-Load-Conditional \
                perl-core \
-               gnupg
+               gnupg2
 
 yum -y install libtool \
                autoconf \
