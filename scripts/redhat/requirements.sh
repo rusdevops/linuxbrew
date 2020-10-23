@@ -11,4 +11,7 @@ yum -y install curl \
                perl-Module-Load-Conditional \
                perl-core \
                gnupg2
+dnf -y install gcc-toolset-9-gcc gcc-toolset-9-gcc-c++
+
 yum clean all
+dnf clean all
