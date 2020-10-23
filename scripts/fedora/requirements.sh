@@ -23,3 +23,5 @@ yum -y install libtool \
                unzip \
                diffutils
 yum clean all
+
+ln -s /usr/bin/gcc /usr/bin/gcc-9
