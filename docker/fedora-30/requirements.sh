@@ -1,1 +1,0 @@
-../../scripts/fedora/requirements.sh

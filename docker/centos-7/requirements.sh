@@ -1,1 +1,0 @@
-../../scripts/redhat/requirements.sh
