@@ -17,9 +17,9 @@ jobs:
           - os: debian-10
             family: debian
             version: 10
-          - os: centos-7
-            family: centos
-            version: 7
+          # - os: centos-7
+          #   family: centos
+          #   version: 7
           - os: fedora-31
             family: fedora
             version: 31
