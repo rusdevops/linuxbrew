@@ -1,0 +1,44 @@
+name: ci_dockerfile
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, debian-10, centos-8, fedora-31]
+        include:
+          - os: ubuntu-20.04
+            family: ubuntu
+            version: 20.04
+          - os: debian-10
+            family: debian
+            version: 10
+          - os: centos-8
+            family: centos
+            version: 8
+          - os: fedora-31
+            family: fedora
+            version: 31
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: docker login
+        run:  echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username fastide --password-stdin
+      - name: docker build
+        run: |
+          pushd docker/${{matrix.family}}-${{matrix.version}}
+          tar -czh . | docker buildx build \
+              -t fastide/linuxbrew-${{ matrix.family }}:${{ matrix.version  }} \
+              --platform=linux/amd64,darwin/amd64 \
+              --build-arg OS_FAMILY=${{ matrix.family }} \
+              --build-arg OS_VERSION=${{ matrix.version  }} \
+              --push -
+          # popd
+          # docker build --build-arg OS_FAMILY=${{matrix.family}} --build-arg OS_VERSION=${{matrix.version}} tests
